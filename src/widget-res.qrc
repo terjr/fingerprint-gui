@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/new/prefix1" >
+    <file>res/Animation.gif</file>
+    <file>res/gnome-user-interface.png</file>
+  </qresource>
+</RCC>

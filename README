@@ -1,0 +1,71 @@
+Description
+===========
+Fingerprint GUI is an application providing fingerprint-based authentication
+on Linux desktops. It features a simple GUI for fingerprint management and
+a PAM module.
+
+Fingerprint GUI is based on the libfprint library. Additionally, you may
+install the bundled non-free libbsapi library. In this case Fingerprint GUI
+will automatically support all fingerprint readers manufactured by UPEK, Inc.
+
+Supported hardware
+==================
+For the list of fingerprint readers supported by libfprint see
+http://reactivated.net/fprint/wiki/Supported_devices . If you install the
+bundled libbsapi library, then all hardware by UPEK should be supported as well.
+
+Installation
+============
+1. Generate the Makefile by running:
+	$ qmake-qt4
+IMPORTANT: For Ubuntu 11.04 (Natty) Alpha1 or other systems with libpolkit-qt-1-1
+please execute "qmake-qt4 LIBPOLKIT_QT = LIBPOLKIT_QT_1_1".
+
+2. Build the software by running:
+	$ make
+In order to compile the software you will need development packages for
+libfprint (version 0.1.0~pre2 and newer), libqt4, libqca2, libfakekey,
+libusb-1.0-0, libpolkit-qt-1 and libpam.
+
+3. Copy all the files into their appropriate locations by running:
+	# make install
+
+4. If you want to add support for UPEK readers, install the bundled proprietary
+library by running:
+	# make install-upek
+Please note that every user that wants to use this library must be member of
+group plugdev. This group is created automatically.
+
+5. See the Step-by-step guide for instructions on how to modify your PAM
+stack to enable fingerprint-based authentication.
+
+Note on files destination:
+By default, everything gets installed under /usr/local. If you want to change
+the prefix to /usr, you can generate the Makefile (step 1) by running:
+	$ qmake-qt4 PREFIX=/usr
+Additionally, libraries are installed into $PREFIX/$LIB, helper executables go
+into $PREFIX/$LIBEXEC, and the PAM module is installed into /$LIB/security. The
+default value for both $LIB and $LIBEXEC is "lib", which should be suitable for
+most Linux distributions. However, should you need to adjust the value of these
+two variables, you can set them in the same fashion as $PREFIX above. For
+instance, on 64-bit Fedora you would generate the Makefile with
+	$ qmake-qt4 LIB=lib64 LIBEXEC=libexec
+or with
+	$ qmake-qt4 PREFIX=/usr LIB=lib64 LIBEXEC=libexec
+provided you want to install into /usr.
+
+License
+=======
+This software is released under GPL-2+. See COPYING for full text of the
+license.
+
+Copyright © 2008-2012 Wolfgang Ullrich <w.ullrich@n-view.net>
+
+Bugs
+====
+Bugs can be sent directly to the author or posted in the forums at
+http://darkblue.homeip.net/fingerprint/Forum/ .
+
+Project home page
+=================
+http://n-view.net/Appliance/fingerprint/
