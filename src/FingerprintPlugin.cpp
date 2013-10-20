@@ -29,6 +29,8 @@
 
 #include "PluginDialog.h"
 
+#include <unistd.h>
+
 using namespace std;
 
 static string syslogIdent=string(PLUGIN_NAME);

@@ -26,6 +26,8 @@
 #include "PamGUI.h"
 #include "FingerprintHelper.h"
 
+#include <unistd.h>
+
 PamGUI::PamGUI(FingerprintDevice *dev,const char *user,const char *finger)
     : QFrame(){
     setupUi(this);

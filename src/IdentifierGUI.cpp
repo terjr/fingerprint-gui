@@ -27,6 +27,8 @@
 #include <iostream>
 #include "IdentifierGUI.h"
 
+#include <unistd.h>
+
 #define KEEP_ON_TOP \
     raise(); \
     activateWindow();

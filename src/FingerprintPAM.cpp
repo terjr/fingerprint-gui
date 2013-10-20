@@ -40,6 +40,8 @@
 
 #include "../include/Globals.h"
 
+#include <unistd.h>
+
 //#define DEBUG_ALL // Debug all function calls. If not defined pam_sm_authenticate is debugged only
 
 using namespace std;

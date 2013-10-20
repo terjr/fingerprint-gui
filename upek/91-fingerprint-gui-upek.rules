@@ -13,3 +13,7 @@ ATTRS{idVendor}=="147e", ATTRS{idProduct}=="201[56]",   ATTR{power/control}=="*"
 ATTRS{idVendor}=="147e", ATTRS{idProduct}=="100[0123]", ATTR{power/control}=="*", ATTR{power/control}="auto"
 ATTRS{idVendor}=="147e", ATTRS{idProduct}=="300[01]",   ATTR{power/control}=="*", ATTR{power/control}="auto"
 ATTRS{idVendor}=="147e", ATTRS{idProduct}=="500[23]",   ATTR{power/control}=="*", ATTR{power/control}="auto"
+
+# from here: http://volker.de/2012/12/fingerprint-gui-und-das-thinkpad-t430s/
+ATTRS{idVendor}=="147e", ATTRS{idProduct}=="2020″,   SYMLINK+="input/touchchip-%k", MODE="0664″, GROUP="plugdev"
+ATTRS{idVendor}=="147e", ATTRS{idProduct}=="2020″,   ATTR{power/control}=="*", ATTR{power/control}="auto"

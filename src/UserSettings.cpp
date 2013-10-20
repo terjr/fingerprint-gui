@@ -38,6 +38,8 @@
 #include <QtCrypto>
 #include <QtXml>
 
+#include <unistd.h>
+
 class SettingsParser:public QXmlDefaultHandler{
     private:
         UserSettings *obj;

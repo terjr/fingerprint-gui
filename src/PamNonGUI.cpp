@@ -26,6 +26,8 @@
 #include "PamNonGUI.h"
 #include "FingerprintHelper.h"
 
+#include <unistd.h>
+
 #define NORMAL  "[0;39m"
 #define RED     "[1;31m"
 #define GREEN   "[1;32m"
